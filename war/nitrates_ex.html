@@ -25,13 +25,14 @@
         var atlas="http://atlas.resources.ca.gov/arcgis/rest/services";
         var cm="http://arcserve.lawr.ucdavis.edu/arcgis/rest/services/CalMAPPER";
         
+
         var mapConfig = {
-                title: "Map Viewer",
+                title: "Nitrates Example",
                 //anchor: "GadgetPanel",
-                zoom : 7,
+                zoom : 8,
                 center : [-121.01, 38.22],
                         
-                selectedBasemap:"149a9bb14d604bd18f4597b21c19fac7",
+	selectedBasemap:"d94dcdbe78e141c2b2d3a91d5ca8b9c9",
                 basemaps: [],
 
                 searchServices : [
@@ -69,12 +70,40 @@
                     }
                 },
 
-
-                datalayers: [],
+	    "datalayers":[
+		{"type":"mapserver",
+		 "label":"CAML2010",
+		 "url":"http://atlas.cws.ucdavis.edu/ArcGIS/rest/services/Environment/CAML2010/MapServer",
+		 "legendUrl":"http://atlas.cws.ucdavis.edu/ArcGIS/rest/services/Environment/CAML2010/MapServer/legend?f=json",
+		 "showLegendOnLoad":false,
+		 "visible":true,
+		 "opacity":0.6,
+		 "isTiled":false,"hasTileOption":false,"legendIsGradient":false},
+		{
+		    "type":"mapserver",
+		    "label":"Boundaries_Map",
+		    "url":"https://gis.water.ca.gov/arcgis/rest/services/Public/Boundaries_Map/MapServer",
+		    "legendUrl":"https://gis.water.ca.gov/arcgis/rest/services/Public/Boundaries_Map/MapServer/legend?f=json",
+		    "showLegendOnLoad":false,
+		    "visible":true,
+		    "opacity":1,
+		    "isTiled":false,
+		    "hasTileOption":false,
+		    "legendIsGradient":false
+		},
+		{
+		    "type":"featurecollection",
+		    "label":"Search Features",
+		    "url":"","legendUrl":"",
+		    "visible":true,
+		    "graphicsLayers":[{"graphics":[]
+				      }]
+		}]
+	}
                                  
                 provider: {
                  icon: "",
-                 popup: "Powered By <a href='http://cstars.ucdavis.edu'>CSTARS</a>",
+                 popup: "Powered By: <a href='http://watershed.ucdavis.edu'>Center for Watershed Sciences</a>",
                  url: ""
                 },
                 
@@ -88,7 +117,6 @@
                         defaultTemplate: "template_test"
                 },
 
-//                proxy: 'http://cmluca.projects.atlas.ca.gov/proxy/proxy'
         }      
     
     </script>
@@ -110,3 +138,5 @@
 
   </body>
 </html>
+
+
