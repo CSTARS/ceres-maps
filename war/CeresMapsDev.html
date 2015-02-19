@@ -1,0 +1,112 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the    -->
+<!-- browser's rendering engine into               -->
+<!-- "Standards Mode". Replacing this declaration  -->
+<!-- with a "Quirks Mode" doctype may lead to some -->
+<!-- differences in layout.                        -->
+
+<html>
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <script src="http://js.arcgis.com/3.8/" ></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://apis.google.com/js/client.js?onload=ginit"></script>
+  <script src="cmvSdm/js/bootstrap.min.js" ></script>
+  <script src="cmvSdm/js/idangerous.swiper-1.9.min.js"></script>
+  <script src="cmvSdm/js/jquery.esriPreview.js"></script>
+
+    <script type="text/javascript" language="javascript" src="cmv/cmv.nocache.js"></script>
+    
+    <script type="text/javascript" language="javascript">
+        var svr="http://atlas.resources.ca.gov/arcgis/rest/services";        
+        var usgs="http://wildfire.cr.usgs.gov/ArcGIS/rest/services";
+        var atlas="http://atlas.resources.ca.gov/arcgis/rest/services";
+        var cm="http://arcserve.lawr.ucdavis.edu/arcgis/rest/services/CalMAPPER";
+        
+        var mapConfig = {
+                title: "Map Viewer",
+                //anchor: "GadgetPanel",
+                zoom : 7,
+                center : [-121.01, 38.22],
+                        
+                selectedBasemap:"149a9bb14d604bd18f4597b21c19fac7",
+                basemaps: [],
+
+                searchServices : [
+                    {
+                       url : "http://atlas.resources.ca.gov/ArcGIS/rest/services/Boundaries/Incorporated_Areas/MapServer/0",
+                       type : "query",
+                       parameter : "NAME",
+                       format : function(attr) {
+                           return attr.NAME+" (City)";
+                       }
+                   },
+                   {
+                       url : "http://atlas.resources.ca.gov/ArcGIS/rest/services/Boundaries/CaCountyBound/MapServer/0",
+                       type : "query",
+                       parameter : "FEAT_NAME"
+                   },
+                   {
+                       url : "http://tasks.arcgis.com/ArcGIS/rest/services/WorldLocator/GeocodeServer",
+                       type : "geocoder"
+                   }
+                ],
+
+                searchColor: {
+                    outline: {
+                        r: 255,
+                        g: 169,
+                        b: 0,
+                        a: 1
+                    },
+                    fill: {
+                        r: 255,
+                        g: 169,
+                        b: 0,
+                        a: .025
+                    }
+                },
+
+
+                datalayers: [],
+                                 
+                provider: {
+                 icon: "",
+                 popup: "Powered By: The <a href='http://www.ceres.ca.gov'>CERES</a> program",
+                 url: ""
+                },
+                
+                geometryServer: atlas+"/Geometry/GeometryServer",
+                identifyTool: true,
+                enableCeresAdditions : true,
+                print: {
+                        server: "http://sampleserver6.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
+                        defaultTitle: "CeresMaps - Export",
+                        defaultFormat: "PNG32",
+                        defaultTemplate: "template_test"
+                },
+
+                proxy: 'http://cmluca.projects.atlas.ca.gov/proxy/proxy'
+        }      
+    
+    </script>
+
+  </head>
+  <body class="claro" style="overflow:hidden">
+
+    <!-- OPTIONAL: include this if you want history support -->
+    <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+    
+    <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+    <noscript>
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+      </div>
+    </noscript>
+
+
+  </body>
+</html>

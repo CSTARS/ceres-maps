@@ -1,0 +1,102 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:a="urn:import:gov.ca.ceres.maps.client.search">
+	
+	<ui:with field='resource' type='edu.ucdavis.gwt.gis.client.resources.GadgetResources'/>
+	
+	<ui:style>
+		.searchBox {
+			border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+			border-style: solid;
+			border-width: 1px;
+			color: #555555;
+			margin-right: 10px;
+			padding: 4px;
+			width: 200px;
+		}
+		.searchBox:focus {
+			border: 1px solid #2278DA;
+			box-shadow: 0 0 2px #CCCCCC inset;
+			-moz-box-shadow: 0 0 2px #CCCCCC inset;
+			-webkit-box-shadow: 0 0 2px #CCCCCC inset;
+		}
+		.searchButton {
+			-moz-transition: border 100ms linear 0s;
+			transition: border 100ms linear 0s;
+			-webkit-transition: border 100ms linear 0s;
+		    background-color: #E8E8E8;
+		    border: 1px solid #DDDDDD;
+		    border-radius: 3px 3px 3px 3px;
+		    color: #666666;
+		    cursor: pointer;
+		    font-size: 15px;
+		    margin: 5px;
+		    padding: 5px;
+		    text-align: center;	
+		}
+		.searchButton:hover {
+			color: #333333;
+			border: 1px solid #999999;	
+		}
+		.title {
+			color: #666666;
+			font-size: 18px;
+			padding: 5px;
+			background-color: #f8f8f8;
+			border-bottom: 1px solid #cccccc;
+			margin-bottom: 5px;
+		}
+		.outerSearchPanel {
+			padding: 5px 20px;
+		}
+		.pagging {
+			padding: 10px;
+			border-top: 1px solid #eeeeee;
+		}
+		.search {
+			padding: 10px 20px;
+		}
+		.resultsPanel {
+			padding: 10px;	
+		}
+		.scrollPanel {
+			border-top: 1px solid #cccccc;
+			box-shadow: 0 0 10px #cccccc inset;
+			-moz-box-shadow: 0 0 10px #cccccc inset;
+			-webkit-box-shadow: 0 0 10px #cccccc inset;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+
+		<g:VerticalPanel width="100%">
+		
+			<g:Cell horizontalAlignment="ALIGN_CENTER">
+				<g:HTML styleName="{style.title}">Search CEIC for Services</g:HTML>
+			</g:Cell>
+		
+			
+			<g:HorizontalPanel verticalAlignment="ALIGN_MIDDLE" styleName="{style.search}">
+				<g:TextBox ui:field="searchBox" styleName="{style.searchBox}"/>
+				<g:HTML ui:field="searchButton" styleName="{style.searchButton}" >Search</g:HTML>
+				<g:HTML ui:field="closeButton" styleName="{style.searchButton}" >Close</g:HTML>
+			
+				<g:SimplePanel width="20px">
+					<g:Image ui:field="loadingIcon" resource="{resource.loading}"/>
+				</g:SimplePanel>
+			</g:HorizontalPanel>
+				
+			<g:HorizontalPanel ui:field="pagingPanel" verticalAlignment="ALIGN_MIDDLE" width="100%" styleName="{style.pagging}">
+				<a:CountComposite ui:field="count" />
+				<a:PaginationComposite ui:field="page" />
+			</g:HorizontalPanel>
+			
+			<g:ScrollPanel ui:field="scrollPanel" styleName="{style.scrollPanel}" >
+				<g:FlowPanel ui:field="resultsPanel" styleName="{style.resultsPanel}"/>
+			</g:ScrollPanel>
+		
+		</g:VerticalPanel>
+
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

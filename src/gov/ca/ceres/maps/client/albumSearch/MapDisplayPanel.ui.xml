@@ -1,0 +1,60 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.title {
+			position: absolute;
+			top: 0px;
+			text-align: center;
+			font-size: 24px;
+			text-shadow: rgba(0, 0, 0, 0.8) 0 1px 5px;
+			z-index: 5;
+			padding: 15px 10px;
+			width: 450px;
+		}
+		.root {
+			transition: all 500ms ease-out;
+			-moz-transition: all 500ms ease-out;
+			-webkit-transition: all 500ms ease-out;
+			
+			border-radius: 12px;
+			-moz-border-radius: 12px;
+			-webkit-border-radius: 12px;
+			
+			padding: 10px;
+			cursor: pointer;
+			outline: none;
+		}
+		.root:hover {
+			background-color: #666666;
+		}
+		.description {
+			padding: 2px;
+			margin-right: 8px;
+			text-shadow: rgba(0, 0, 0, 1) 0 1px 3px;
+			background-color: rgba(0, 0, 0, 0.2);
+		}
+		.outerDescription {
+			overflow: hidden;
+			position: absolute;
+			top: 450px;
+			height: 0px;
+			
+			transition: all 300ms ease-out;
+			-moz-transition: all 300ms ease-out;	
+			-webkit-transition: all 300ms ease-out;
+		}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.root}">
+		<g:FocusPanel width="450px" ui:field="eventPanel">
+			<g:FlowPanel>
+				<g:HTML ui:field="title" styleName="{style.title}"/>
+				
+				<g:SimplePanel ui:field="outerPreview" />
+				<g:SimplePanel height="0px" ui:field="outerDescription" styleName="{style.outerDescription}">
+					<g:HTML ui:field="description" styleName="{style.description}" />
+				</g:SimplePanel>
+			</g:FlowPanel>
+		</g:FocusPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,8 @@
+gwt-unitCache
+*.class
+classes
+.settings
+.classpath
+war/classes
+war/WEB-INF/lib
+war/WEB-INF/classes
