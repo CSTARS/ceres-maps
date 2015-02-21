@@ -18,13 +18,13 @@
   <script src="../cmv/js/jquery.esriPreview.js"></script>
 
     <script type="text/javascript" language="javascript" src="../cmv/cmv.nocache.js"></script>
-    
+
     <script type="text/javascript" language="javascript">
-        var svr="http://atlas.resources.ca.gov/arcgis/rest/services";        
+        var svr="http://atlas.resources.ca.gov/arcgis/rest/services";
         var usgs="http://wildfire.cr.usgs.gov/ArcGIS/rest/services";
         var atlas="http://atlas.resources.ca.gov/arcgis/rest/services";
         var cm="http://arcserve.lawr.ucdavis.edu/arcgis/rest/services/CalMAPPER";
-        
+
 
 var mapConfig = {
     title: "Nitrates Example",
@@ -36,7 +36,7 @@ var mapConfig = {
     ],
     selectedBasemap: "d94dcdbe78e141c2b2d3a91d5ca8b9c9",
     basemaps: [
-        
+
     ],
     searchServices: [
         {
@@ -71,45 +71,41 @@ var mapConfig = {
             a: .025
         }
     },
-    "datalayers": [
-        {
-            "type": "mapserver",
-            "label": "CAML2010",
-            "url": "http://atlas.cws.ucdavis.edu/ArcGIS/rest/services/Environment/CAML2010/MapServer",
-            "legendUrl": "http://atlas.cws.ucdavis.edu/ArcGIS/rest/services/Environment/CAML2010/MapServer/legend?f=json",
-            "showLegendOnLoad": false,
-            "visible": true,
-            "opacity": 0.6,
-            "isTiled": false,
-            "hasTileOption": false,
-            "legendIsGradient": false
-        },
-        {
-            "type": "mapserver",
-            "label": "Boundaries_Map",
-            "url": "https://gis.water.ca.gov/arcgis/rest/services/Public/Boundaries_Map/MapServer",
-            "legendUrl": "https://gis.water.ca.gov/arcgis/rest/services/Public/Boundaries_Map/MapServer/legend?f=json",
-            "showLegendOnLoad": false,
-            "visible": true,
-            "opacity": 1,
-            "isTiled": false,
-            "hasTileOption": false,
-            "legendIsGradient": false
-        },
-        {
-            "type": "featurecollection",
-            "label": "Search Features",
-            "url": "",
-            "legendUrl": "",
-            "visible": true,
-            "graphicsLayers": [
-                {
-                    "graphics": [
-                        
-                    ]
-                }
-            ]
-        }
+
+  "datalayers":[
+      {
+        "type":"mapserver",
+        "label":"Boundaries_Map",
+        "url":"https://gis.water.ca.gov/arcgis/rest/services/Public/Boundaries_Map/MapServer",
+        "legendUrl":"https://gis.water.ca.gov/arcgis/rest/services/Public/Boundaries_Map/MapServer/legend?f=json",
+        "showLegendOnLoad":false,
+        "visible":true,
+        "opacity":1,
+        "isTiled":false,
+        "hasTileOption":false,
+        "legendIsGradient":false
+
+      },
+      {
+        "type":"mapserver",
+        "label":"CAML2010",
+        "url":"http://atlas.cws.ucdavis.edu/ArcGIS/rest/services/Environment/CAML2010/MapServer",
+        "legendUrl":"http://atlas.cws.ucdavis.edu/ArcGIS/rest/services/Environment/CAML2010/MapServer/legend?f=json",
+        "showLegendOnLoad":false,
+        "visible":true,
+        "opacity":0.2,
+        "isTiled":false,
+        "hasTileOption":false,
+        "legendIsGradient":false
+      },
+      {
+        "type":"mapserver",
+        "label":"Subsidence",
+        "url":"https://gis.water.ca.gov/arcgis/rest/services/Public/Subsidence/MapServer",
+        "legendUrl":"https://gis.water.ca.gov/arcgis/rest/services/Public/Subsidence/MapServer/legend?f=json",
+        "showLegendOnLoad":false,"visible":true,"opacity":1,"isTiled":false,"hasTileOption":false,"legendIsGradient":false
+
+      }
     ],
     provider: {
         icon: "",
@@ -124,9 +120,9 @@ var mapConfig = {
         defaultTitle: "CeresMaps - Export",
         defaultFormat: "PNG32",
         defaultTemplate: "template_test"
-    }   
+    }
 }
-    
+
     </script>
 
   </head>
@@ -134,7 +130,7 @@ var mapConfig = {
 
     <!-- OPTIONAL: include this if you want history support -->
     <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
-    
+
     <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
     <noscript>
       <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
