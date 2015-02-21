@@ -1,0 +1,32 @@
+{
+  "name": "ceres-maps",
+  "version": "0.5.0",
+  "description": "This is a web package for the ceres-maps",
+  "main": "Gruntfile.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-http-server": "~1.2.0",
+    "http-server": "~0.7.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSTARS/ceres-maps.git"
+  },
+  "keywords": [
+    "ersi",
+    "webmap"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CSTARS/ceres-maps/issues"
+  },
+  "homepage": "https://github.com/CSTARS/ceres-maps"
+}
