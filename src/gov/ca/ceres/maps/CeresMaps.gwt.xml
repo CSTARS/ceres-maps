@@ -10,7 +10,7 @@
   <!-- Inherit the core Web Toolkit stuff.                        -->
   <inherits name='com.google.gwt.user.User'/>
   <inherits name='edu.ucdavis.cstars.EsriGwt' />
-  <inherits name='edu.ucdavis.gwt.gis.GwtGisSDM' />
+  <inherits name='edu.ucdavis.gwt.gis.GwtGis' />
 
   <!-- Super Dev Mode Linker -->
   <!--  <add-linker name="xsiframe" /> -->
