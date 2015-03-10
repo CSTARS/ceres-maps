@@ -1,0 +1,182 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the    -->
+<!-- browser's rendering engine into               -->
+<!-- "Standards Mode". Replacing this declaration  -->
+<!-- with a "Quirks Mode" doctype may lead to some -->
+<!-- differences in layout.                        -->
+
+<html>
+  <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script type="text/javascript" language="javascript" src="//cstars.github.io/ceres-maps/cmv/cmv.nocache.js"></script>
+
+    <script type="text/javascript" language="javascript">
+
+var mapConfig = {
+    title: "Fertilizer Loading",
+    //anchor: "GadgetPanel",
+    zoom: 8,
+    center: [
+        -121.01,
+        38.22
+    ],
+    selectedBasemap: "d94dcdbe78e141c2b2d3a91d5ca8b9c9",
+    basemaps: [
+
+    ],
+    searchServices: [
+        {
+            url: "http://tasks.arcgis.com/ArcGIS/rest/services/WorldLocator/GeocodeServer",
+            type: "geocoder"
+        }
+    ],
+    searchColor: {
+        outline: {
+            r: 255,
+            g: 169,
+            b: 0,
+            a: 1
+        },
+        fill: {
+            r: 255,
+            g: 169,
+            b: 0,
+            a: .025
+        }
+    },
+
+"datalayers":[
+      {
+        "type":"mapserver",
+        "label":"2050 Fertilizer",
+        "url":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_2050/MapServer",
+        "legendUrl":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_2050/MapServer/legend?f=json",
+        "showLegendOnLoad":false,
+        "visible":false,
+        "opacity":0.3,
+        "isTiled":false,
+        "hasTileOption":false,
+        "legendIsGradient":false
+      },
+      {
+        "type":"mapserver",
+        "label":"2035 Fertilizer",
+        "url":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_2035/MapServer",
+        "legendUrl":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_2035/MapServer/legend?f=json",
+        "showLegendOnLoad":false,
+        "visible":false,
+        "opacity":0.3,
+        "isTiled":false,
+        "hasTileOption":false,
+        "legendIsGradient":false
+      },
+      {
+        "type":"mapserver",
+        "label":"2020 Fertilizer",
+        "url":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_2020/MapServer",
+        "legendUrl":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_2020/MapServer/legend?f=json",
+        "showLegendOnLoad":false,
+        "visible":false,
+        "opacity":0.3,
+        "isTiled":false,
+        "hasTileOption":false,
+        "legendIsGradient":false
+      },
+      {
+        "type":"mapserver",
+        "label":"2005 Fertilizer",
+        "url":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_2005/MapServer",
+        "legendUrl":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_2005/MapServer/legend?f=json",
+        "showLegendOnLoad":false,
+        "visible":true,
+        "opacity":0.3,
+        "isTiled":false,
+        "hasTileOption":false,
+        "legendIsGradient":false
+      },
+      {
+        "type":"mapserver",
+        "label":"1990 Fertilizer",
+        "url":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_1990/MapServer",
+        "legendUrl":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_1990/MapServer/legend?f=json",
+        "showLegendOnLoad":false,
+        "visible":false,
+        "opacity":0.3,
+        "isTiled":false,
+        "hasTileOption":false,
+        "legendIsGradient":false
+      },
+      {
+        "type":"mapserver",
+        "label":"1975 Fertilizer",
+        "url":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_1975/MapServer",
+        "legendUrl":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_1975/MapServer/legend?f=json",
+        "showLegendOnLoad":false,
+        "visible":false,
+        "opacity":0.3,
+        "isTiled":false,
+        "hasTileOption":false,
+        "legendIsGradient":false
+      },
+      {
+        "type":"mapserver",
+        "label":"1960 Fertilizer",
+        "url":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_1960/MapServer",
+        "legendUrl":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_1960/MapServer/legend?f=json",
+        "showLegendOnLoad":false,
+        "visible":false,
+        "opacity":0.3,
+        "isTiled":false,
+        "hasTileOption":false,
+        "legendIsGradient":false
+      },
+      {
+        "type":"mapserver",
+        "label":"1945 Fertilizer",
+        "url":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_1945/MapServer",
+        "legendUrl":"http://atlas.cws.ucdavis.edu/arcgis/rest/services/nitrogen_fertilizer/Nfertilizer_1945/MapServer/legend?f=json",
+        "showLegendOnLoad":false,
+        "visible":false,
+        "opacity":0.3,
+        "isTiled":false,
+        "hasTileOption":false,
+        "legendIsGradient":false
+      },
+    ],
+    provider: {
+        icon: "icon.png",
+        popup: "Powered By: <a href='http://groundwaternitrate.ucdavis.edu'>UC Davis Report on Groundwater Nitrates</a>",
+        url: "http://groundwaternitrate.ucdavis.edu"
+    },
+    geometryServer: "http://atlas.cws.ucdavis.edu/arcgis/rest/services/Geometry/GeometryServer",
+    identifyTool: true,
+    enableCeresAdditions: true,
+    print: {
+        server: "http://sampleserver6.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
+        defaultTitle: "CeresMaps - Export",
+        defaultFormat: "PNG32",
+        defaultTemplate: "template_test"
+    }
+}
+
+    </script>
+
+  </head>
+  <body class="claro" style="overflow:hidden">
+
+
+    <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+    <noscript>
+      <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+      </div>
+    </noscript>
+
+
+  </body>
+</html>
+
+
