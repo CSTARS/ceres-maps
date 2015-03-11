@@ -3,6 +3,7 @@ gwt-unitCache
 classes
 .settings
 .classpath
+war/svm
 war/sdm
 war/classes
 war/WEB-INF/deploy
