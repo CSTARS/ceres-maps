@@ -45,9 +45,7 @@ public class CeresMaps implements EntryPoint {
 				onClientReady();
 			}
 		});
-
 	}
-	
 
 		
 	public void onClientReady() {
@@ -60,10 +58,12 @@ public class CeresMaps implements EntryPoint {
 		    mapClient.getToolbar().addToolbarMenu(new IdentifyMenu());
 		}
 		
+		/* TODO: reimplement if we get a new search service up for this
 		if( ceresConfig.enableCeresAdditions() ) {
 		    Debugger.INSTANCE.log("Adding ceres additions");
 		    mapClient.getAddLayerMenu().addItem(search.getIcon());	
 		}
+		*/
 		
 		Debugger.INSTANCE.log("Adding draw button");
 		mapClient.getAddLayerMenu().addItem(new DrawToolButton());
